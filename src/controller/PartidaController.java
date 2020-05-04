@@ -5,26 +5,23 @@
  */
 package controller;
 
+import static controller.RankingController.gravarPartida;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import javax.swing.JButton;
+import model.Partida;
+import model.Usuario;
 
 /**
  *
  * @author renan
  */
-public class Validacoes {
-    public static boolean validarResposta(String Resposta){
-        if (Resposta.equals("Solar")){
-            return true;
-        }
-        return false;
-    }
+public class PartidaController {
     
-    public static boolean ler(String caminho, String alternativa){
+    public static boolean validarResposta(String alternativa){
         boolean statusResposta = false;
+        String caminho = "src/controller/respostas.txt";
         String conteudo;
         String resposta="";
         int i = 0;
@@ -32,7 +29,7 @@ public class Validacoes {
           FileReader arq = new FileReader(caminho);
           BufferedReader lerArq = new BufferedReader(arq);
          ){
-                while(i< 4){
+                while(i< 10){
                     resposta = lerArq.readLine();
                     if(resposta.equals(alternativa)){
                         statusResposta = true;
@@ -46,4 +43,18 @@ public class Validacoes {
       }
       return statusResposta;
     }
+    
+    public static void gerarPartida(String nome, String dificuldade, int pontuacao) throws IOException, FileNotFoundException, ClassNotFoundException{
+        Usuario player;
+        if(nome.equals("")){
+            player = new Usuario();
+        } else {
+            player = new Usuario(nome);
+        }       
+        Partida quiz = new Partida(player,pontuacao,dificuldade);
+        gravarPartida(quiz);
+    }
+    
+       
+    
 }

@@ -13,20 +13,21 @@ import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.ImageIcon;
 
+
 /**
  *
  * @author renan
  */
-public class JFNovato0 extends javax.swing.JFrame {
+public class JFNovato1 extends javax.swing.JFrame {
     String user;
     int pontuacao;
     String dificuldade;
     Timer timer = new Timer();
-    
+
     /**
      * Creates new form JFPrincipal
      */
-    public JFNovato0(String nome, int pontuacao, String dificuldade){
+    public JFNovato1(String nome, int pontuacao, String dificuldade){
         initComponents();
         this.setLocationRelativeTo(null); // Centralizando JFRAME
         
@@ -42,13 +43,14 @@ public class JFNovato0 extends javax.swing.JFrame {
         //Exibindo pontuacao
         lblPontuacao.setText("Pontuação: " + Integer.toString(pontuacao));
         
-        TimerTask task = new TimerTask(){
+         
+         TimerTask task = new TimerTask(){
             int tempo = 10;
             public void run(){
                 tempo -= 1;
                 lblCronometro.setText(Integer.toString(tempo));
                 if (tempo == 0){
-                    JFNovato1 next = new JFNovato1(user,pontuacao,dificuldade);
+                    JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
                     next.setVisible(true);
                     timer.cancel();
                     dispose();
@@ -57,8 +59,8 @@ public class JFNovato0 extends javax.swing.JFrame {
             }
         };
     
-        timer.scheduleAtFixedRate(task, 1000, 1000);  
-              
+        timer.scheduleAtFixedRate(task, 1000, 1000);
+               
     } 
     
     /**
@@ -93,11 +95,11 @@ public class JFNovato0 extends javax.swing.JFrame {
         lblEnunciado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblEnunciado.setForeground(new java.awt.Color(255, 255, 255));
         lblEnunciado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEnunciado.setText("o seu próprio alimento, através da luz solar?");
+        lblEnunciado.setText("são reciclados e transportados em adubo orgânico:");
 
         JBResposta0.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta0.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta0.setText("Comilança Solar");
+        JBResposta0.setText("Aragem");
         JBResposta0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta0ActionPerformed(evt);
@@ -106,7 +108,7 @@ public class JFNovato0 extends javax.swing.JFrame {
 
         JBResposta1.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta1.setText("Outro");
+        JBResposta1.setText("Pastagem");
         JBResposta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta1ActionPerformed(evt);
@@ -115,7 +117,7 @@ public class JFNovato0 extends javax.swing.JFrame {
 
         JBResposta2.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta2.setText("Dieta");
+        JBResposta2.setText("Compostagem");
         JBResposta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta2ActionPerformed(evt);
@@ -124,7 +126,7 @@ public class JFNovato0 extends javax.swing.JFrame {
 
         JBResposta3.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta3.setText("Fotossíntese");
+        JBResposta3.setText("Remontagem");
         JBResposta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta3ActionPerformed(evt);
@@ -134,7 +136,7 @@ public class JFNovato0 extends javax.swing.JFrame {
         lblEnunciado1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblEnunciado1.setForeground(new java.awt.Color(255, 255, 255));
         lblEnunciado1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEnunciado1.setText("Como é chamado o processo no qual a planta produz");
+        lblEnunciado1.setText("Como se chama o processo onde os resíduos orgânicos");
 
         lblPontuacao.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblPontuacao.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,7 +163,7 @@ public class JFNovato0 extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(lblEnunciado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblEnunciado1, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                        .addComponent(lblEnunciado1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(JPPrincipalLayout.createSequentialGroup()
                         .addComponent(lblTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -281,7 +283,7 @@ public class JFNovato0 extends javax.swing.JFrame {
     }//GEN-LAST:event_lblFecharMouseEntered
     //Ao clicar na label minimizar a janela é minimizada
     private void lblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseClicked
-        this.setState(JFNovato0.ICONIFIED);
+        this.setState(JFNovato1.ICONIFIED);
     }//GEN-LAST:event_lblMinimizarMouseClicked
     //Ao passar o mouse sobre a label Minimizar ele é alterado.
     private void lblMinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseEntered
@@ -292,7 +294,7 @@ public class JFNovato0 extends javax.swing.JFrame {
            if(validarResposta(JBResposta0.getText()) == true){
             pontuacao += Integer.parseInt(lblCronometro.getText());
            }
-           JFNovato1 next = new JFNovato1(user,pontuacao,dificuldade);
+           JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
            next.setVisible(true);
            timer.cancel();
            dispose();
@@ -302,7 +304,7 @@ public class JFNovato0 extends javax.swing.JFrame {
             if(validarResposta(JBResposta1.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
             }
-            JFNovato1 next = new JFNovato1(user,pontuacao,dificuldade);
+            JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
             next.setVisible(true);
             timer.cancel();
             dispose();
@@ -312,7 +314,7 @@ public class JFNovato0 extends javax.swing.JFrame {
             if(validarResposta(JBResposta2.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
             }
-            JFNovato1 next = new JFNovato1(user,pontuacao,dificuldade);
+            JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
             next.setVisible(true);
             timer.cancel();
             dispose();
@@ -323,7 +325,7 @@ public class JFNovato0 extends javax.swing.JFrame {
        if(validarResposta(JBResposta3.getText()) == true){
            pontuacao += Integer.parseInt(lblCronometro.getText());
        }
-           JFNovato1 next = new JFNovato1(user,pontuacao,dificuldade);
+           JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
            next.setVisible(true);
            timer.cancel();
            dispose();

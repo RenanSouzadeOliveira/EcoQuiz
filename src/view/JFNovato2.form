@@ -49,32 +49,29 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="lblEnunciado" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="lblEnunciado" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="lblEnunciado1" pref="392" max="32767" attributes="0"/>
+                      <Component id="lblEnunciado1" pref="394" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblTempo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="lblTempo" min="-2" pref="63" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblCronometro" min="-2" pref="23" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="JBResposta2" max="32767" attributes="0"/>
-                              <Component id="JBResposta3" max="32767" attributes="0"/>
-                              <Component id="JBResposta1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JBResposta0" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="lblCronometro" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lblPontuacao" min="-2" pref="109" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="JBResposta3" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Component id="JBResposta1" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Component id="JBResposta0" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="JBResposta2" min="-2" pref="171" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblPontuacao" min="-2" pref="112" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -84,29 +81,22 @@
                   <Component id="lblEnunciado1" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblEnunciado" min="-2" pref="31" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="JBResposta0" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                  <Component id="JBResposta0" min="-2" pref="23" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="JBResposta1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Component id="JBResposta2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="JBResposta3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="lblPontuacao" alignment="0" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblTempo" alignment="3" pref="31" max="32767" attributes="0"/>
-                                  <Component id="lblCronometro" alignment="3" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="JBResposta3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lblPontuacao" max="32767" attributes="0"/>
+                      <Component id="lblTempo" alignment="1" max="32767" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="lblCronometro" alignment="3" max="32767" attributes="0"/>
+                          <Component id="JBResposta2" alignment="3" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="61" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -121,7 +111,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="o seu pr&#xf3;prio alimento, atrav&#xe9;s da luz solar?"/>
+            <Property name="text" type="java.lang.String" value="por res&#xed;duos s&#xf3;lidos s&#xe3;o:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="JBResposta0">
@@ -132,7 +122,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Comilan&#xe7;a Solar"/>
+            <Property name="text" type="java.lang.String" value="Queimadas"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta0ActionPerformed"/>
@@ -146,7 +136,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Outro"/>
+            <Property name="text" type="java.lang.String" value="Contamina&#xe7;&#xe3;o das &#xc1;guas"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta1ActionPerformed"/>
@@ -160,7 +150,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dieta"/>
+            <Property name="text" type="java.lang.String" value="Extin&#xe7;&#xe3;o"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta2ActionPerformed"/>
@@ -174,7 +164,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Fotoss&#xed;ntese"/>
+            <Property name="text" type="java.lang.String" value="Desmatamento"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta3ActionPerformed"/>
@@ -189,7 +179,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Como &#xe9; chamado o processo no qual a planta produz"/>
+            <Property name="text" type="java.lang.String" value="Um dos principais impactos ambientais causados"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPontuacao">
@@ -212,7 +202,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="   Tempo:"/>
+            <Property name="text" type="java.lang.String" value="Tempo:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCronometro">

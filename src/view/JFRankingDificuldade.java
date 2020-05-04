@@ -13,12 +13,12 @@ import javax.swing.ImageIcon;
  *
  * @author renan
  */
-public class JFPrincipal extends javax.swing.JFrame {
+public class JFRankingDificuldade extends javax.swing.JFrame {
 
     /**
      * Creates new form JFPrincipal
      */
-    public JFPrincipal(){
+    public JFRankingDificuldade(){
         initComponents();
         this.setLocationRelativeTo(null); // Centralizando JFRAME
         
@@ -39,8 +39,9 @@ public class JFPrincipal extends javax.swing.JFrame {
 
         JPPrincipal = new javax.swing.JPanel();
         lblBemVindo = new javax.swing.JLabel();
-        JBConsultaRanking = new javax.swing.JButton();
-        JBIniciarPartida = new javax.swing.JButton();
+        JBNovato = new javax.swing.JButton();
+        JBNormal = new javax.swing.JButton();
+        JBHard = new javax.swing.JButton();
         JPLogo = new javax.swing.JPanel();
         lblIconP = new javax.swing.JLabel();
         lblFechar = new javax.swing.JLabel();
@@ -54,27 +55,19 @@ public class JFPrincipal extends javax.swing.JFrame {
         lblBemVindo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblBemVindo.setForeground(new java.awt.Color(255, 255, 255));
         lblBemVindo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblBemVindo.setText("Bem-vindo ao EcoQuiz");
+        lblBemVindo.setText("Escolha a dificuldade do ranking que deseja consultar:");
 
-        JBConsultaRanking.setBackground(new java.awt.Color(128, 222, 234));
-        JBConsultaRanking.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        JBConsultaRanking.setText("Consultar Ranking");
-        JBConsultaRanking.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JBConsultaRanking.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBConsultaRankingActionPerformed(evt);
-            }
-        });
+        JBNovato.setBackground(new java.awt.Color(128, 222, 234));
+        JBNovato.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        JBNovato.setText("Novato");
 
-        JBIniciarPartida.setBackground(new java.awt.Color(128, 222, 234));
-        JBIniciarPartida.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        JBIniciarPartida.setText("Iniciar Partida");
-        JBIniciarPartida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JBIniciarPartida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBIniciarPartidaActionPerformed(evt);
-            }
-        });
+        JBNormal.setBackground(new java.awt.Color(128, 222, 234));
+        JBNormal.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        JBNormal.setText("Normal");
+
+        JBHard.setBackground(new java.awt.Color(128, 222, 234));
+        JBHard.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        JBHard.setText("Hard");
 
         javax.swing.GroupLayout JPPrincipalLayout = new javax.swing.GroupLayout(JPPrincipal);
         JPPrincipal.setLayout(JPPrincipalLayout);
@@ -82,21 +75,24 @@ public class JFPrincipal extends javax.swing.JFrame {
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblBemVindo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(JPPrincipalLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(141, 141, 141)
                 .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JBConsultaRanking, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JBIniciarPartida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JBNovato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JBNormal, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                    .addComponent(JBHard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JPPrincipalLayout.setVerticalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPPrincipalLayout.createSequentialGroup()
                 .addComponent(lblBemVindo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(JBIniciarPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JBNovato, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(JBConsultaRanking, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 60, Short.MAX_VALUE))
+                .addComponent(JBNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(JBHard, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 27, Short.MAX_VALUE))
         );
 
         JPLogo.setBackground(new java.awt.Color(187, 222, 251));
@@ -184,18 +180,6 @@ public class JFPrincipal extends javax.swing.JFrame {
         lblMinimizar.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_lblMinimizarMouseEntered
 
-    private void JBIniciarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBIniciarPartidaActionPerformed
-        JFDificulty telaDificuldade = new JFDificulty();
-        telaDificuldade.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_JBIniciarPartidaActionPerformed
-
-    private void JBConsultaRankingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBConsultaRankingActionPerformed
-        JFRankingDificuldade rank = new JFRankingDificuldade();
-        rank.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_JBConsultaRankingActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -232,8 +216,9 @@ public class JFPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JBConsultaRanking;
-    private javax.swing.JButton JBIniciarPartida;
+    private javax.swing.JButton JBHard;
+    private javax.swing.JButton JBNormal;
+    private javax.swing.JButton JBNovato;
     private javax.swing.JPanel JPLogo;
     private javax.swing.JPanel JPPrincipal;
     private javax.swing.JLabel lblBemVindo;

@@ -13,43 +13,40 @@ ambientalmente educativas.
 # EcoQuiz
 > Com base na proposta de trabalho apresentada acima, o grupo teve como solução desenvolver um Quiz sobre educação ambiental. As funcionalidades pensadas até o momento são:  
 
-	- O Quiz deverá ter 5 níveis de dificuldade:  
+	- O Quiz deverá ter 3 níveis de dificuldade:  
 
 			- Novato;  
 
 			- Normal;  
 
-			- Especialista;  
-
-			- Gênio;  
-
-			- Crânio.  
+			- Hard;  
+  
 
 	- Cada nível deverá ser composto por 10 questões;  
 
-	- O usuário tem 10 segundos para responder cada questão;  
+	- O usuário tem um tempo(o tempo depende do nível: Novato= 30 segundos| Normal = 20 Segundos | Hard = 10 segundos) para responder cada questão;  
 
-	- A pontuação do usuário varia de 0 a 10 de acordo com o tempo que ele demorou para responder:  
+	- A pontuação do usuário varia de acordo com o tempo que ele demorou para responder, como no exemplo abaixo:  
 
-		- 10 segundos = 10 pontos;  
+		- 1 segundo = 10 pontos;  
 
-		- 9 segundos = 9 pontos;  
+		- 2 segundos = 9 pontos;  
 
-		- 8 segundos = 8 pontos;  
+		- 3 segundos = 8 pontos;  
 
-		- 7 segundos = 7 pontos;  
+		- 4 segundos = 7 pontos;  
 
-		- 6 segundos = 6 pontos;  
+		- 5 segundos = 6 pontos;  
 
-		- 5 segundos = 5 pontos;  
+		- 6 segundos = 5 pontos;  
 
-		- 4 segundos = 4 pontos;  
+		- 7 segundos = 4 pontos;  
 
-		- 3 segundos = 3 pontos;  
+		- 8 segundos = 3 pontos;  
 
-		- 2 segundos = 2 pontos;  
+		- 9 segundos = 2 pontos;  
 
-		- 1 segundo = 1 ponto;  
+		- 10 segundos = 1 ponto;  
 
 		- não respondeu = 0;  
 

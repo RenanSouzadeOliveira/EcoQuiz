@@ -57,7 +57,7 @@
                           <Component id="lblEnunciado" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="lblEnunciado1" pref="392" max="32767" attributes="0"/>
+                          <Component id="lblEnunciado1" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -121,7 +121,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="o seu pr&#xf3;prio alimento, atrav&#xe9;s da luz solar?"/>
+            <Property name="text" type="java.lang.String" value="s&#xe3;o reciclados e transportados em adubo org&#xe2;nico:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="JBResposta0">
@@ -132,7 +132,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Comilan&#xe7;a Solar"/>
+            <Property name="text" type="java.lang.String" value="Aragem"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta0ActionPerformed"/>
@@ -146,7 +146,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Outro"/>
+            <Property name="text" type="java.lang.String" value="Pastagem"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta1ActionPerformed"/>
@@ -160,7 +160,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Dieta"/>
+            <Property name="text" type="java.lang.String" value="Compostagem"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta2ActionPerformed"/>
@@ -174,7 +174,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Fotoss&#xed;ntese"/>
+            <Property name="text" type="java.lang.String" value="Remontagem"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBResposta3ActionPerformed"/>
@@ -189,7 +189,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Como &#xe9; chamado o processo no qual a planta produz"/>
+            <Property name="text" type="java.lang.String" value="Como se chama o processo onde os res&#xed;duos org&#xe2;nicos"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPontuacao">

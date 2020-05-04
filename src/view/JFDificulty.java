@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package view;
-
 import java.awt.Cursor;
 import javax.swing.ImageIcon;
 
@@ -29,6 +28,7 @@ public class JFDificulty extends javax.swing.JFrame {
         ImageIcon seta = new ImageIcon("src/view/imagens/setaEsquerda.png");
         seta.setImage(seta.getImage().getScaledInstance(35, 35, 1));
         lblVoltar.setIcon(seta);
+                     
     }
 
     /**
@@ -40,6 +40,11 @@ public class JFDificulty extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JPLogo = new javax.swing.JPanel();
+        lblIconP = new javax.swing.JLabel();
+        lblFechar = new javax.swing.JLabel();
+        lblMinimizar = new javax.swing.JLabel();
+        lblVoltar = new javax.swing.JLabel();
         JPPrincipal = new javax.swing.JPanel();
         lblEscolhaDificuldade = new javax.swing.JLabel();
         JBNovato = new javax.swing.JButton();
@@ -47,78 +52,12 @@ public class JFDificulty extends javax.swing.JFrame {
         JBEspecialista = new javax.swing.JButton();
         JBGenio = new javax.swing.JButton();
         JBCranio = new javax.swing.JButton();
-        JPLogo = new javax.swing.JPanel();
-        lblIconP = new javax.swing.JLabel();
-        lblFechar = new javax.swing.JLabel();
-        lblMinimizar = new javax.swing.JLabel();
-        lblVoltar = new javax.swing.JLabel();
+        lblDigiteNome = new javax.swing.JLabel();
+        lblNome = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-
-        JPPrincipal.setBackground(new java.awt.Color(144, 202, 249));
-
-        lblEscolhaDificuldade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lblEscolhaDificuldade.setForeground(new java.awt.Color(255, 255, 255));
-        lblEscolhaDificuldade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEscolhaDificuldade.setText("Escolha a Dificuldade que deseja jogar:");
-
-        JBNovato.setBackground(new java.awt.Color(128, 222, 234));
-        JBNovato.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBNovato.setText("Novato");
-        JBNovato.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBNovatoActionPerformed(evt);
-            }
-        });
-
-        JBNormal.setBackground(new java.awt.Color(128, 222, 234));
-        JBNormal.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBNormal.setText("Normal");
-
-        JBEspecialista.setBackground(new java.awt.Color(128, 222, 234));
-        JBEspecialista.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBEspecialista.setText("Especialista");
-
-        JBGenio.setBackground(new java.awt.Color(128, 222, 234));
-        JBGenio.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBGenio.setText("Gênio");
-
-        JBCranio.setBackground(new java.awt.Color(128, 222, 234));
-        JBCranio.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBCranio.setText("Crânio");
-
-        javax.swing.GroupLayout JPPrincipalLayout = new javax.swing.GroupLayout(JPPrincipal);
-        JPPrincipal.setLayout(JPPrincipalLayout);
-        JPPrincipalLayout.setHorizontalGroup(
-            JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblEscolhaDificuldade, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
-            .addGroup(JPPrincipalLayout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JBEspecialista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JBCranio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JBGenio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JBNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JBNovato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        JPPrincipalLayout.setVerticalGroup(
-            JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JPPrincipalLayout.createSequentialGroup()
-                .addComponent(lblEscolhaDificuldade, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(JBNovato)
-                .addGap(11, 11, 11)
-                .addComponent(JBNormal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JBEspecialista)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JBGenio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JBCranio)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
 
         JPLogo.setBackground(new java.awt.Color(187, 222, 251));
 
@@ -160,6 +99,108 @@ public class JFDificulty extends javax.swing.JFrame {
             }
         });
 
+        JPPrincipal.setBackground(new java.awt.Color(144, 202, 249));
+
+        lblEscolhaDificuldade.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lblEscolhaDificuldade.setForeground(new java.awt.Color(255, 255, 255));
+        lblEscolhaDificuldade.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEscolhaDificuldade.setText("Escolha a Dificuldade:");
+
+        JBNovato.setBackground(new java.awt.Color(128, 222, 234));
+        JBNovato.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        JBNovato.setText("Novato");
+        JBNovato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBNovatoActionPerformed(evt);
+            }
+        });
+
+        JBNormal.setBackground(new java.awt.Color(128, 222, 234));
+        JBNormal.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        JBNormal.setText("Normal");
+
+        JBEspecialista.setBackground(new java.awt.Color(128, 222, 234));
+        JBEspecialista.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        JBEspecialista.setText("Especialista");
+
+        JBGenio.setBackground(new java.awt.Color(128, 222, 234));
+        JBGenio.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        JBGenio.setText("Gênio");
+
+        JBCranio.setBackground(new java.awt.Color(128, 222, 234));
+        JBCranio.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        JBCranio.setText("Crânio");
+
+        lblDigiteNome.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lblDigiteNome.setForeground(new java.awt.Color(255, 255, 255));
+        lblDigiteNome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDigiteNome.setText("Digite seu nome:");
+
+        lblNome.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lblNome.setForeground(new java.awt.Color(255, 255, 255));
+        lblNome.setText("Nome:");
+
+        txtNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        javax.swing.GroupLayout JPPrincipalLayout = new javax.swing.GroupLayout(JPPrincipal);
+        JPPrincipal.setLayout(JPPrincipalLayout);
+        JPPrincipalLayout.setHorizontalGroup(
+            JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPPrincipalLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(lblDigiteNome)
+                .addGap(120, 120, 120)
+                .addComponent(lblEscolhaDificuldade, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(JPPrincipalLayout.createSequentialGroup()
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblNome)
+                        .addGap(4, 4, 4)
+                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(177, 177, 177)
+                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JBNormal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JBNovato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(305, 305, 305)
+                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JBGenio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JBEspecialista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(305, 305, 305)
+                        .addComponent(JBCranio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        JPPrincipalLayout.setVerticalGroup(
+            JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JPPrincipalLayout.createSequentialGroup()
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(lblDigiteNome))
+                    .addComponent(lblEscolhaDificuldade, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(lblNome))
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JBNovato))))
+                .addGap(6, 6, 6)
+                .addComponent(JBNormal)
+                .addGap(6, 6, 6)
+                .addComponent(JBEspecialista)
+                .addGap(6, 6, 6)
+                .addComponent(JBGenio)
+                .addGap(6, 6, 6)
+                .addComponent(JBCranio)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout JPLogoLayout = new javax.swing.GroupLayout(JPLogo);
         JPLogo.setLayout(JPLogoLayout);
         JPLogoLayout.setHorizontalGroup(
@@ -172,6 +213,7 @@ public class JFDificulty extends javax.swing.JFrame {
                 .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(JPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         JPLogoLayout.setVerticalGroup(
             JPLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,22 +224,21 @@ public class JFDificulty extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblMinimizar, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                         .addComponent(lblFechar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(lblVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(lblVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JPPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(JPLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JPLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(JPPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(JPLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -230,7 +271,7 @@ public class JFDificulty extends javax.swing.JFrame {
     }//GEN-LAST:event_lblVoltarMouseEntered
 
     private void JBNovatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBNovatoActionPerformed
-        JFNovato0 fase0 = new JFNovato0 ();
+        JFNovato0 fase0 = new JFNovato0 (txtNome.getText(), 0,JBNovato.getText());
         fase0.setVisible(true);
         dispose();
     }//GEN-LAST:event_JBNovatoActionPerformed
@@ -278,10 +319,13 @@ public class JFDificulty extends javax.swing.JFrame {
     private javax.swing.JButton JBNovato;
     private javax.swing.JPanel JPLogo;
     private javax.swing.JPanel JPPrincipal;
+    private javax.swing.JLabel lblDigiteNome;
     private javax.swing.JLabel lblEscolhaDificuldade;
     private javax.swing.JLabel lblFechar;
     private javax.swing.JLabel lblIconP;
     private javax.swing.JLabel lblMinimizar;
+    private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblVoltar;
+    private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }

@@ -51,10 +51,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="lblBemVindo" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="JBConsultaRanking" max="32767" attributes="0"/>
-                      <Component id="JBIniciarPartida" max="32767" attributes="0"/>
+                      <Component id="JBNovato" max="32767" attributes="0"/>
+                      <Component id="JBNormal" alignment="0" pref="104" max="32767" attributes="0"/>
+                      <Component id="JBHard" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -64,11 +65,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="lblBemVindo" min="-2" pref="25" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                  <Component id="JBIniciarPartida" min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="JBNovato" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="JBConsultaRanking" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                  <Component id="JBNormal" min="-2" pref="42" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="JBHard" min="-2" pref="42" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -83,10 +86,10 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Bem-vindo ao EcoQuiz"/>
+            <Property name="text" type="java.lang.String" value="Escolha a dificuldade do ranking que deseja consultar:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="JBConsultaRanking">
+        <Component class="javax.swing.JButton" name="JBNovato">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ea" green="de" red="80" type="rgb"/>
@@ -94,16 +97,10 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Consultar Ranking"/>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="Novato"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBConsultaRankingActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="JBIniciarPartida">
+        <Component class="javax.swing.JButton" name="JBNormal">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ea" green="de" red="80" type="rgb"/>
@@ -111,14 +108,19 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Iniciar Partida"/>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="Normal"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JBIniciarPartidaActionPerformed"/>
-          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="JBHard">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ea" green="de" red="80" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Hard"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
