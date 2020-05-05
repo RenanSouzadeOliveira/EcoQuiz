@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package view;
+import view.JFPrincipal;
+import view.Novato.JFNovato0;
 import java.awt.Cursor;
 import javax.swing.ImageIcon;
+import view.Normal.JFNormal0;
 
 /**
  *
@@ -118,6 +121,11 @@ public class JFDificulty extends javax.swing.JFrame {
         JBNormal.setBackground(new java.awt.Color(128, 222, 234));
         JBNormal.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         JBNormal.setText("Normal");
+        JBNormal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBNormalActionPerformed(evt);
+            }
+        });
 
         JBEspecialista.setBackground(new java.awt.Color(128, 222, 234));
         JBEspecialista.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
@@ -275,6 +283,12 @@ public class JFDificulty extends javax.swing.JFrame {
         fase0.setVisible(true);
         dispose();
     }//GEN-LAST:event_JBNovatoActionPerformed
+
+    private void JBNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBNormalActionPerformed
+        JFNormal0 next = new JFNormal0(txtNome.getText(),0,JBNormal.getText());
+        next.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_JBNormalActionPerformed
 
     /**
      * @param args the command line arguments

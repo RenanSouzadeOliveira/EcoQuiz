@@ -12,12 +12,12 @@ import java.util.ArrayList;
  *
  * @author renan
  */
-public class Ranking implements Serializable{
+public class Ranking{
     private ArrayList<Partida> partida = new ArrayList<Partida>();
     
     public ArrayList<Partida> getPartida() {
         return partida;
-    }
+    }    
     
     
     public Ranking(ArrayList<Partida> quiz){
@@ -29,6 +29,8 @@ public class Ranking implements Serializable{
         return this.partida.toString();
         
     }
+
+    
     
     
 }

@@ -39,5 +39,6 @@ public class Partida implements Serializable{
     public String toString(){
         return this.user.getNome()+ "\t" + this.getPontuacao() + "\t" + this.getDificuldade() + "\t\n";
     }
+
     
 }

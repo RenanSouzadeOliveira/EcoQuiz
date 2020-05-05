@@ -5,7 +5,7 @@
  */
 package controller;
 
-import static controller.RankingController.gravarPartida;
+import static controller.GravarPartida.gravarPartida;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

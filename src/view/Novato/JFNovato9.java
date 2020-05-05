@@ -3,31 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package view.Novato;
 
 
+import static controller.PartidaController.gerarPartida;
 import static controller.PartidaController.validarResposta;
-import java.awt.Color;
 import java.awt.Cursor;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-
+import javax.swing.JOptionPane;
+import view.JFPrincipal;
 
 /**
  *
  * @author renan
  */
-public class JFNovato1 extends javax.swing.JFrame {
+public class JFNovato9 extends javax.swing.JFrame {
     String user;
     int pontuacao;
     String dificuldade;
     Timer timer = new Timer();
-
     /**
      * Creates new form JFPrincipal
      */
-    public JFNovato1(String nome, int pontuacao, String dificuldade){
+    public JFNovato9(String nome, int pontuacao, String dificuldade) {
         initComponents();
         this.setLocationRelativeTo(null); // Centralizando JFRAME
         
@@ -42,15 +45,23 @@ public class JFNovato1 extends javax.swing.JFrame {
         
         //Exibindo pontuacao
         lblPontuacao.setText("Pontuação: " + Integer.toString(pontuacao));
-        
-         
          TimerTask task = new TimerTask(){
-            int tempo = 10;
+            int tempo = 25;
             public void run(){
                 tempo -= 1;
                 lblCronometro.setText(Integer.toString(tempo));
                 if (tempo == 0){
-                    JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
+                    JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
+                    "Dificuldade: " + dificuldade + "\n" + 
+                    "Pontuação: " + pontuacao);
+                    try {
+                            gerarPartida(user,dificuldade,pontuacao);
+                    } catch (IOException ex) {
+                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    JFPrincipal next = new JFPrincipal();
                     next.setVisible(true);
                     timer.cancel();
                     dispose();
@@ -58,11 +69,9 @@ public class JFNovato1 extends javax.swing.JFrame {
                 }
             }
         };
-    
         timer.scheduleAtFixedRate(task, 1000, 1000);
-               
-    } 
-    
+     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -95,11 +104,11 @@ public class JFNovato1 extends javax.swing.JFrame {
         lblEnunciado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblEnunciado.setForeground(new java.awt.Color(255, 255, 255));
         lblEnunciado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEnunciado.setText("são reciclados e transportados em adubo orgânico:");
+        lblEnunciado.setText("ou impede o desenvolvimento da outra:");
 
         JBResposta0.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta0.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta0.setText("Aragem");
+        JBResposta0.setText("Comensalismo");
         JBResposta0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta0ActionPerformed(evt);
@@ -108,7 +117,7 @@ public class JFNovato1 extends javax.swing.JFrame {
 
         JBResposta1.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta1.setText("Pastagem");
+        JBResposta1.setText("Amensalismo");
         JBResposta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta1ActionPerformed(evt);
@@ -117,7 +126,7 @@ public class JFNovato1 extends javax.swing.JFrame {
 
         JBResposta2.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta2.setText("Compostagem");
+        JBResposta2.setText("Competição");
         JBResposta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta2ActionPerformed(evt);
@@ -126,7 +135,7 @@ public class JFNovato1 extends javax.swing.JFrame {
 
         JBResposta3.setBackground(new java.awt.Color(128, 222, 234));
         JBResposta3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        JBResposta3.setText("Remontagem");
+        JBResposta3.setText("Predação");
         JBResposta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JBResposta3ActionPerformed(evt);
@@ -136,47 +145,45 @@ public class JFNovato1 extends javax.swing.JFrame {
         lblEnunciado1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblEnunciado1.setForeground(new java.awt.Color(255, 255, 255));
         lblEnunciado1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEnunciado1.setText("Como se chama o processo onde os resíduos orgânicos");
+        lblEnunciado1.setText("Relação ecológica entre duas espécies em que uma inibe");
 
         lblPontuacao.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblPontuacao.setForeground(new java.awt.Color(255, 255, 255));
         lblPontuacao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPontuacao.setText("Pontuação:");
 
         lblTempo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblTempo.setForeground(new java.awt.Color(255, 255, 255));
         lblTempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTempo.setText("   Tempo:");
+        lblTempo.setText("Tempo:");
 
         lblCronometro.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblCronometro.setForeground(new java.awt.Color(255, 255, 255));
         lblCronometro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCronometro.setText("10");
+        lblCronometro.setText("25");
 
         javax.swing.GroupLayout JPPrincipalLayout = new javax.swing.GroupLayout(JPPrincipal);
         JPPrincipal.setLayout(JPPrincipalLayout);
         JPPrincipalLayout.setHorizontalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblEnunciado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(JPPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEnunciado1, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
                     .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lblEnunciado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblEnunciado1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addComponent(lblTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblTempo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblCronometro, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JBResposta2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(JBResposta3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(JBResposta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(JBResposta0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblCronometro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblPontuacao, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JBResposta0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JBResposta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JBResposta3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JBResposta2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblPontuacao, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         JPPrincipalLayout.setVerticalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,20 +195,16 @@ public class JFNovato1 extends javax.swing.JFrame {
                 .addComponent(JBResposta0)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(JBResposta1)
-                .addGap(14, 14, 14)
-                .addComponent(JBResposta2)
+                .addGap(12, 12, 12)
+                .addComponent(JBResposta3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addComponent(JBResposta3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPPrincipalLayout.createSequentialGroup()
-                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblPontuacao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblTempo, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                                .addComponent(lblCronometro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(29, 29, 29))))
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblCronometro, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                        .addComponent(JBResposta2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblTempo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPontuacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         JPLogo.setBackground(new java.awt.Color(187, 222, 251));
@@ -260,8 +263,8 @@ public class JFNovato1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(JPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JPLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,7 +286,7 @@ public class JFNovato1 extends javax.swing.JFrame {
     }//GEN-LAST:event_lblFecharMouseEntered
     //Ao clicar na label minimizar a janela é minimizada
     private void lblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseClicked
-        this.setState(JFNovato1.ICONIFIED);
+        this.setState(JFNovato9.ICONIFIED);
     }//GEN-LAST:event_lblMinimizarMouseClicked
     //Ao passar o mouse sobre a label Minimizar ele é alterado.
     private void lblMinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseEntered
@@ -294,7 +297,10 @@ public class JFNovato1 extends javax.swing.JFrame {
            if(validarResposta(JBResposta0.getText()) == true){
             pontuacao += Integer.parseInt(lblCronometro.getText());
            }
-           JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
+           JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
+                   "Dificuldade: " + this.dificuldade + "\n" + 
+                   "Pontuação: " + this.pontuacao);
+           JFPrincipal next = new JFPrincipal();
            next.setVisible(true);
            timer.cancel();
            dispose();
@@ -304,17 +310,30 @@ public class JFNovato1 extends javax.swing.JFrame {
             if(validarResposta(JBResposta1.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
             }
-            JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
+            JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
+                   "Dificuldade: " + this.dificuldade + "\n" + 
+                   "Pontuação: " + this.pontuacao);
+            JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();
             dispose();
+        try {
+            gerarPartida(user,dificuldade,pontuacao);
+        } catch (IOException ex) {
+            Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_JBResposta1ActionPerformed
 
     private void JBResposta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta2ActionPerformed
             if(validarResposta(JBResposta2.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
             }
-            JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
+            JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
+                   "Dificuldade: " + this.dificuldade + "\n" + 
+                   "Pontuação: " + this.pontuacao);
+            JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();
             dispose();
@@ -325,12 +344,15 @@ public class JFNovato1 extends javax.swing.JFrame {
        if(validarResposta(JBResposta3.getText()) == true){
            pontuacao += Integer.parseInt(lblCronometro.getText());
        }
-           JFNovato2 next = new JFNovato2(user,pontuacao,dificuldade);
+           JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
+                   "Dificuldade: " + this.dificuldade + "\n" + 
+                   "Pontuação: " + this.pontuacao);
+           JFPrincipal next = new JFPrincipal();
            next.setVisible(true);
            timer.cancel();
            dispose();
     }//GEN-LAST:event_JBResposta3ActionPerformed
- 
+
     /**
      * @param args the command line arguments
      */
@@ -364,7 +386,6 @@ public class JFNovato1 extends javax.swing.JFrame {
                 new JFPrincipal().setVisible(true);
             }
         });
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

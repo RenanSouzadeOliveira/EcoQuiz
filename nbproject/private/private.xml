@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/RankingController.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/model/Ranking.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/PartidaController.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/model/Partida.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFRankingDificuldade.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFPrincipal.java</file>
+            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/Novato/JFNovato0.java</file>
+            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/respostas.txt</file>
+            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFDificulty.java</file>
         </group>
     </open-files>
 </project-private>

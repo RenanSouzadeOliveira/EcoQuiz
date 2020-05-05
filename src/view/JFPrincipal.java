@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package view;
+
 import java.awt.Cursor;
 import javax.swing.ImageIcon;
 

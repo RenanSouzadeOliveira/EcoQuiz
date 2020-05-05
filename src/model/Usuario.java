@@ -20,7 +20,7 @@ public class Usuario implements Serializable{
     }
     public Usuario(){
         Random geradorAleatorio = new Random();
-        String user = "Anônimo[" + geradorAleatorio.nextInt() + "]";
+        String user = "User{" + geradorAleatorio.nextInt(100) + "}";
         this.nome = user;
     }
 
