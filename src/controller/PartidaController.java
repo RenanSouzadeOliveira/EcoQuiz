@@ -29,7 +29,7 @@ public class PartidaController {
           FileReader arq = new FileReader(caminho);
           BufferedReader lerArq = new BufferedReader(arq);
          ){
-                while(i< 20){
+                while(i< 30){
                     resposta = lerArq.readLine();
                     if(resposta.equals(alternativa)){
                         statusResposta = true;
