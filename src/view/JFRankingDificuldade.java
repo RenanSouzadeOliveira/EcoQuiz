@@ -75,6 +75,11 @@ public class JFRankingDificuldade extends javax.swing.JFrame {
         JBNormal.setBackground(new java.awt.Color(128, 222, 234));
         JBNormal.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         JBNormal.setText("Normal");
+        JBNormal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBNormalActionPerformed(evt);
+            }
+        });
 
         JBHard.setBackground(new java.awt.Color(128, 222, 234));
         JBHard.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -218,6 +223,12 @@ public class JFRankingDificuldade extends javax.swing.JFrame {
     private void lblSetaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSetaMouseEntered
         lblSeta.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_lblSetaMouseEntered
+
+    private void JBNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBNormalActionPerformed
+        JFRankingNormal next = new JFRankingNormal();
+        next.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_JBNormalActionPerformed
 
     /**
      * @param args the command line arguments

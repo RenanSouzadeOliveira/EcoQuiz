@@ -26,12 +26,12 @@ import model.Ranking;
  *
  * @author renan
  */
-public class JFRankingNovato extends javax.swing.JFrame {
+public class JFRankingNormal extends javax.swing.JFrame {
 
     /**
      * Creates new form JFPrincipal
      */
-    public JFRankingNovato(){
+    public JFRankingNormal(){
         initComponents();
         this.setLocationRelativeTo(null); // Centralizando JFRAME
         
@@ -51,7 +51,7 @@ public class JFRankingNovato extends javax.swing.JFrame {
         ArrayList<Partida> partida = new ArrayList<Partida>();
         Ranking ranking;
         try{
-           partida = lerRanking(partida,"Novato");
+           partida = lerRanking(partida,"Normal");
            Collections.sort(partida, new  ComparadorRanking());
            ranking = new Ranking(partida);
            for(int i=0;i < ranking.getPartida().size();i++){
@@ -223,7 +223,7 @@ public class JFRankingNovato extends javax.swing.JFrame {
     }//GEN-LAST:event_lblFecharMouseEntered
 
     private void lblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseClicked
-        this.setState(JFRankingNovato.ICONIFIED);
+        this.setState(JFRankingNormal.ICONIFIED);
     }//GEN-LAST:event_lblMinimizarMouseClicked
 
     private void lblMinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinimizarMouseEntered
