@@ -7,7 +7,6 @@ package controller;
 
 import static controller.GravarPartida.gravarPartida;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import model.Partida;
@@ -44,7 +43,7 @@ public class PartidaController {
       return statusResposta;
     }
     
-    public static void gerarPartida(String nome, String dificuldade, int pontuacao) throws IOException, FileNotFoundException, ClassNotFoundException{
+    public static void gerarPartida(String nome, String dificuldade, int pontuacao){
         Usuario player;
         if(nome.equals("")){
             player = new Usuario();

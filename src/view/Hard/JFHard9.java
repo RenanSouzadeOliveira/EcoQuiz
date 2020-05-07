@@ -60,13 +60,8 @@ public class JFHard9 extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Parabéns  " + user + "\n" +
                     "Dificuldade: " + dificuldade + "\n" + 
                     "Pontuação: " + pontuacao);
-                    try {
-                            gerarPartida(user,dificuldade,pontuacao);
-                    } catch (IOException ex) {
-                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (ClassNotFoundException ex) {
-                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    gerarPartida(user,dificuldade,pontuacao);
+                    
                     JFPrincipal next = new JFPrincipal();
                     next.setVisible(true);
                     timer.cancel();
@@ -308,13 +303,7 @@ public class JFHard9 extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
                                         "Dificuldade: " + dificuldade + "\n" + 
                                         "Pontuação: " + pontuacao);
-            try {
-                gerarPartida(user,dificuldade,pontuacao);
-            } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            gerarPartida(user,dificuldade,pontuacao);
             JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();
@@ -328,13 +317,7 @@ public class JFHard9 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
                                         "Dificuldade: " + dificuldade + "\n" + 
                                         "Pontuação: " + pontuacao);
-            try {
-                gerarPartida(user,dificuldade,pontuacao);
-            } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            gerarPartida(user,dificuldade,pontuacao);
             JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();
@@ -348,13 +331,7 @@ public class JFHard9 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
                                         "Dificuldade: " + dificuldade + "\n" + 
                                         "Pontuação: " + pontuacao);
-            try {
-                gerarPartida(user,dificuldade,pontuacao);
-            } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            gerarPartida(user,dificuldade,pontuacao);
             JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();
@@ -369,13 +346,7 @@ public class JFHard9 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
                                         "Dificuldade: " + dificuldade + "\n" + 
                                         "Pontuação: " + pontuacao);
-            try {
-                gerarPartida(user,dificuldade,pontuacao);
-            } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            gerarPartida(user,dificuldade,pontuacao);
             JFPrincipal next = new JFPrincipal();
             next.setVisible(true);
             timer.cancel();

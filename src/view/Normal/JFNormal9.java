@@ -54,13 +54,7 @@ public class JFNormal9 extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
                     "Dificuldade: " + dificuldade + "\n" + 
                     "Pontuação: " + pontuacao);
-                    try {
-                            gerarPartida(user,dificuldade,pontuacao);
-                    } catch (IOException ex) {
-                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (ClassNotFoundException ex) {
-                        Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    gerarPartida(user,dificuldade,pontuacao);
                     JFPrincipal next = new JFPrincipal();
                     next.setVisible(true);
                     timer.cancel();
@@ -299,13 +293,7 @@ public class JFNormal9 extends javax.swing.JFrame {
            next.setVisible(true);
            timer.cancel();
            dispose();
-           try {
                 gerarPartida(user,dificuldade,pontuacao);
-           } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           }
     }//GEN-LAST:event_JBResposta0ActionPerformed
 
     private void JBResposta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta1ActionPerformed
@@ -319,13 +307,7 @@ public class JFNormal9 extends javax.swing.JFrame {
            next.setVisible(true);
            timer.cancel();
            dispose();
-           try {
-                gerarPartida(user,dificuldade,pontuacao);
-           } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           }
+           gerarPartida(user,dificuldade,pontuacao);
     }//GEN-LAST:event_JBResposta1ActionPerformed
 
     private void JBResposta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta3ActionPerformed
@@ -336,13 +318,7 @@ public class JFNormal9 extends javax.swing.JFrame {
            next.setVisible(true);
            timer.cancel();
            dispose();
-           try {
-                gerarPartida(user,dificuldade,pontuacao);
-           } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           }
+           gerarPartida(user,dificuldade,pontuacao);
     }//GEN-LAST:event_JBResposta3ActionPerformed
 
     private void JBResposta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta2ActionPerformed
@@ -356,13 +332,7 @@ public class JFNormal9 extends javax.swing.JFrame {
            next.setVisible(true);
            timer.cancel();
            dispose();
-           try {
-                gerarPartida(user,dificuldade,pontuacao);
-           } catch (IOException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           } catch (ClassNotFoundException ex) {
-                Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-           }
+           gerarPartida(user,dificuldade,pontuacao);
     }//GEN-LAST:event_JBResposta2ActionPerformed
 
     /**

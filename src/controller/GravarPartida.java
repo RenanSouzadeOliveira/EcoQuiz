@@ -5,36 +5,48 @@
  */
 package controller;
 
-import static controller.LerPartida.lerRanking;
-import static controller.LerPartida.verificaDificuldade;
+import static controller.LerRanking.lerRanking;
+import static controller.LerRanking.verificaDificuldade;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import model.Partida;
+import view.JFPrincipal;
 
 /**
  *
  * @author renan
  */
 public class GravarPartida {
-    public static void gravarPartida(Partida quiz) throws FileNotFoundException, IOException, ClassNotFoundException{
-      ArrayList<Partida> ranking = new ArrayList<Partida>();// recebe o ranking
+    public static void gravarPartida(Partida quiz){
+      ArrayList<Partida> ranking = new ArrayList<Partida>();// recebe o ranking      
       String arquivo; // caminho do arquivo do ranking
-      arquivo = verificaDificuldade(quiz.getDificuldade()); // retorna o caminho para o arquivo do rankinh correto
-      File file;
-      file = new File(arquivo);// abrindo o arquivo do ranking
-      if(verificaConteudo(file) == false){
-          ranking = lerRanking(ranking,quiz.getDificuldade());
-          ranking.add(quiz);
-      } else {
-          ranking.add(quiz);
+      
+      arquivo = verificaDificuldade(quiz.getDificuldade()); // verificando qual ranking deverá ser aberto
+      File file = new File(arquivo); // Instanciando o arquvio
+      try{
+          // abrindo o arquivo do ranking
+          if(verificaConteudo(file) == false){
+            ranking = lerRanking(ranking,quiz.getDificuldade()); // lendo o ranking ja existente
+            ranking.add(quiz);// adicionando a nova partida caso ja exista um ranking
+          } else {
+            ranking.add(quiz);// adicionando partida caso não exista um ranking
+          }
+          ObjectOutputStream r = new ObjectOutputStream(new FileOutputStream(file));// ObjectOutPutStream permite gravar o objeto, podendo 'reconstruilo' com o ObjectInputStream
+          r.writeObject(ranking); // gravando o arrayList
+          r.close(); 
+      } catch(FileNotFoundException e){
+          JOptionPane.showMessageDialog(null,"Ops, tivemos um erro, tente novamente","Erro",JOptionPane.ERROR_MESSAGE);
+          System.exit(0);
+      } catch(IOException e){
+          JOptionPane.showMessageDialog(null,"Ops, tivemos um erro, tente novamente","Erro",JOptionPane.ERROR_MESSAGE);
+          System.exit(0);
       }
-      ObjectOutputStream r = new ObjectOutputStream(new FileOutputStream(file));
-      r.writeObject(ranking);
-      r.close();
+      
       }
     
      private static boolean verificaConteudo(File file){

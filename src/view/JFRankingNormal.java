@@ -7,7 +7,7 @@ package view;
 import view.JFPrincipal;
 import view.Novato.JFNovato9;
 import controller.ComparadorRanking;
-import static controller.LerPartida.lerRanking;
+import static controller.LerRanking.lerRanking;
 import java.awt.Cursor;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,18 +50,13 @@ public class JFRankingNormal extends javax.swing.JFrame {
         
         ArrayList<Partida> partida = new ArrayList<Partida>();
         Ranking ranking;
-        try{
-           partida = lerRanking(partida,"Normal");
-           Collections.sort(partida, new  ComparadorRanking());
-           ranking = new Ranking(partida);
-           for(int i=0;i < ranking.getPartida().size();i++){
-               TXTRanking.setText(ranking.toString().replaceAll(","," ").replace("[", "  ").replace("]",""));
-           }
-        }catch (IOException ex) {
-            Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(JFNovato9.class.getName()).log(Level.SEVERE, null, ex);
+        partida = lerRanking(partida,"Normal");
+        Collections.sort(partida, new  ComparadorRanking());
+        ranking = new Ranking(partida);
+        for(int i=0;i < ranking.getPartida().size();i++){
+            TXTRanking.setText(ranking.toString().replaceAll(","," ").replace("[", "  ").replace("]",""));
         }
+        
         
         
     }
