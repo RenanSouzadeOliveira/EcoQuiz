@@ -43,7 +43,7 @@ public class PartidaController {
       return statusResposta;
     }
     
-    public static void gerarPartida(String nome, String dificuldade, int pontuacao){
+    public static Usuario gerarPartida(String nome, String dificuldade, int pontuacao){
         Usuario player;
         if(nome.equals("")){
             player = new Usuario();
@@ -52,6 +52,7 @@ public class PartidaController {
         }       
         Partida quiz = new Partida(player,pontuacao,dificuldade);
         gravarPartida(quiz);
+        return player;
     }
     
        

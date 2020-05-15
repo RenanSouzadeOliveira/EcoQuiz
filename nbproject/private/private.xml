@@ -3,12 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/Novato/JFNovato9.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/LerRanking.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFRankingNormal.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFRankingHard.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/GravarPartida.java</file>
-            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/view/JFRankingNovato.java</file>
+            <file>file:/C:/Users/renan/OneDrive/Documentos/NetBeansProjects/EcoQuiz3.0/src/controller/PartidaController.java</file>
         </group>
     </open-files>
 </project-private>

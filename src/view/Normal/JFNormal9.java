@@ -15,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import model.Usuario;
 import view.JFPrincipal;
 import view.Novato.JFNovato9;
 
@@ -51,10 +52,11 @@ public class JFNormal9 extends javax.swing.JFrame {
                 tempo -= 1;
                 lblCronometro.setText(Integer.toString(tempo));
                 if (tempo == 0){
-                    JOptionPane.showMessageDialog(null, "Parabéns: " + user + "\n" +
+                    Usuario player;
+                    player = gerarPartida(user,dificuldade,pontuacao);
+                    JOptionPane.showMessageDialog(null, "Parabéns: " + player + "\n" +
                     "Dificuldade: " + dificuldade + "\n" + 
-                    "Pontuação: " + pontuacao);
-                    gerarPartida(user,dificuldade,pontuacao);
+                    "Pontuação: " + pontuacao);                   
                     JFPrincipal next = new JFPrincipal();
                     next.setVisible(true);
                     timer.cancel();
@@ -285,54 +287,64 @@ public class JFNormal9 extends javax.swing.JFrame {
     private void JBResposta0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta0ActionPerformed
         if(validarResposta(JBResposta0.getText()) == true){
             pontuacao += Integer.parseInt(lblCronometro.getText());
-           }
-           JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
-                   "Dificuldade: " + this.dificuldade + "\n" + 
-                   "Pontuação: " + this.pontuacao);
-           JFPrincipal next = new JFPrincipal();
-           next.setVisible(true);
-           timer.cancel();
-           dispose();
-                gerarPartida(user,dificuldade,pontuacao);
+        }
+        Usuario player;
+        player = gerarPartida(user,dificuldade,pontuacao);
+        JOptionPane.showMessageDialog(null, "Parabéns: " + player + "\n" +
+            "Dificuldade: " + this.dificuldade + "\n" + 
+            "Pontuação: " + this.pontuacao);
+        JFPrincipal next = new JFPrincipal();
+        next.setVisible(true);
+        timer.cancel();
+        dispose();
+                
     }//GEN-LAST:event_JBResposta0ActionPerformed
 
     private void JBResposta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta1ActionPerformed
         if(validarResposta(JBResposta1.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
-            }
-           JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
-                   "Dificuldade: " + this.dificuldade + "\n" + 
-                   "Pontuação: " + this.pontuacao);
-           JFPrincipal next = new JFPrincipal();
-           next.setVisible(true);
-           timer.cancel();
-           dispose();
-           gerarPartida(user,dificuldade,pontuacao);
+        }
+        Usuario player;
+        player = gerarPartida(user,dificuldade,pontuacao);
+        JOptionPane.showMessageDialog(null, "Parabéns: " + player + "\n" +
+            "Dificuldade: " + this.dificuldade + "\n" + 
+            "Pontuação: " + this.pontuacao);
+        JFPrincipal next = new JFPrincipal();
+        next.setVisible(true);
+        timer.cancel();
+        dispose();
+           
     }//GEN-LAST:event_JBResposta1ActionPerformed
 
     private void JBResposta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta3ActionPerformed
-       JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
-                   "Dificuldade: " + this.dificuldade + "\n" + 
-                   "Pontuação: " + this.pontuacao);
-           JFPrincipal next = new JFPrincipal();
-           next.setVisible(true);
-           timer.cancel();
-           dispose();
-           gerarPartida(user,dificuldade,pontuacao);
+       if(validarResposta(JBResposta3.getText()) == true){
+            pontuacao += Integer.parseInt(lblCronometro.getText());
+       }
+       Usuario player;
+       player = gerarPartida(user,dificuldade,pontuacao);
+       JOptionPane.showMessageDialog(null, "Parabéns: " + player + "\n" +
+            "Dificuldade: " + this.dificuldade + "\n" + 
+            "Pontuação: " + this.pontuacao);
+       JFPrincipal next = new JFPrincipal();
+       next.setVisible(true);
+       timer.cancel();
+       dispose();
+        
     }//GEN-LAST:event_JBResposta3ActionPerformed
 
     private void JBResposta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBResposta2ActionPerformed
         if(validarResposta(JBResposta2.getText()) == true){
                 pontuacao += Integer.parseInt(lblCronometro.getText());
-            }
-           JOptionPane.showMessageDialog(null, "Parabéns: " + this.user + "\n" +
-                   "Dificuldade: " + this.dificuldade + "\n" + 
-                   "Pontuação: " + this.pontuacao);
-           JFPrincipal next = new JFPrincipal();
-           next.setVisible(true);
-           timer.cancel();
-           dispose();
-           gerarPartida(user,dificuldade,pontuacao);
+        }
+        Usuario player;
+        player = gerarPartida(user,dificuldade,pontuacao);
+        JOptionPane.showMessageDialog(null, "Parabéns: " + player + "\n" +
+            "Dificuldade: " + this.dificuldade + "\n" + 
+            "Pontuação: " + this.pontuacao);
+        JFPrincipal next = new JFPrincipal();
+        next.setVisible(true);
+        timer.cancel();
+        dispose();
     }//GEN-LAST:event_JBResposta2ActionPerformed
 
     /**
